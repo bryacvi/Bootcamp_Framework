@@ -39,13 +39,9 @@ public class BaseTest {
         }
     }
 
-    public void print(String text) {
-        System.out.println(text);
-    }
-
     @AfterMethod(lastTimeOnly = true)
     public void afterMethod() {
-        //When Testing all cases, lastTimeOnly setting fails, so I'm commenting it
+        //When Testing all cases, lastTimeOnly setting fails, so I'm commenting driver.quit();
         //driver.quit();
     }
 }

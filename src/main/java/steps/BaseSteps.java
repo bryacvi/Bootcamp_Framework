@@ -43,7 +43,6 @@ public class BaseSteps {
             System.out.println("Scrolling in Firefox");
             sleepFor(1000);
             js.executeScript("arguments[0].scrollIntoView(true);", scrollTo);
-            //((FirefoxDriver) webDriver).executeScript("arguments[0].scrollIntoView();", scrollTo);
         }
         if (webDriver instanceof ChromeDriver) {
             System.out.println("Scrolling in Chrome");
@@ -122,6 +121,48 @@ public class BaseSteps {
         // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+
+    public String extractStringFromLine(String str, int line) {
+        int finalPointer=0, Separators=0, initialPointer=0, length = 0;
+
+        for (int i=0 ; i < str.length() ; i++) {
+            if (str.charAt(i) == System.lineSeparator().charAt(0)) {
+                initialPointer = finalPointer+1;
+                finalPointer = i;
+                Separators++;
+                if (line == Separators) break;
+            }
+            else if(i == (str.length())-1) {
+                initialPointer = finalPointer+1;
+                finalPointer = i+1;
+                Separators++;
+            }
+        }
+
+        length = finalPointer-initialPointer;
+
+        if((line == Separators) && (line == 1)) {
+            char [] filter = new char[length+1];
+
+            if (line == 1) for (int i=0 ; i < length+1 ; i++) filter[i] = str.charAt(i);
+
+            else for (int i=0 ; i < length ; i++) filter[i] = str.charAt(i+initialPointer);
+
+            String result = new String(filter);
+            return result;
+        }
+
+        else if((line == Separators) && (line != 1)) {
+            char [] filter = new char[length];
+
+            for (int i=0 ; i < length ; i++) filter[i] = str.charAt(i+initialPointer);
+
+            String result = new String(filter);
+            return result;
+        }
+
+        return null;
     }
 
 }

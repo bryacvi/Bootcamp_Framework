@@ -5,13 +5,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
 import steps.*;
 import org.testng.annotations.Test;
-import pageobjects.HoverOverPage;
+import pageObjects.HomePage;
+import pageObjects.DeviceDetailsPage;
 
 public class ProductStoreTests extends BaseTest {
     ElementsSteps elementsSteps = new ElementsSteps(driver);
     MiscellaneousSteps miscellaneousSteps = new MiscellaneousSteps(driver);
     ProductStoreSteps productStoreSteps = new ProductStoreSteps(driver);
-    HoverOverPage hoverOver = PageFactory.initElements(driver, HoverOverPage.class);
+    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+    DeviceDetailsPage deviceDetailsPage = PageFactory.initElements(driver, DeviceDetailsPage.class);
 
     @Test(groups = "ProjectSuite")
     public void TestURLisCorrect () {
@@ -23,7 +25,7 @@ public class ProductStoreTests extends BaseTest {
     }
 
     @Test(groups = "ProjectSuite")
-    public void TestTitleisCorrect () {
+    public void TestTitlesCorrect () {
         productStoreSteps.navigateHome();
         String expectedTitle = "STORE";
         String actualTitle = elementsSteps.getTitle();
@@ -45,7 +47,7 @@ public class ProductStoreTests extends BaseTest {
         Wait<WebDriver> wait = miscellaneousSteps.startDriverWait(50, 200);
         productStoreSteps.navigateHome();
         productStoreSteps.homeProductVerification(wait);
-        hoverOver.getFirstDevice().click();
+        homePage.getFirstDevice().click();
         productStoreSteps.productDetailsVerification(wait);
 
         System.out.println("Test Passed!");
@@ -56,7 +58,7 @@ public class ProductStoreTests extends BaseTest {
         Wait<WebDriver> wait = miscellaneousSteps.startDriverWait(50, 200);
         productStoreSteps.navigateHome();
         productStoreSteps.homeProductVerification(wait);
-        hoverOver.getFirstDevice().click();
+        homePage.getFirstDevice().click();
         productStoreSteps.addProductVerification(wait);
 
         System.out.println("Test Passed!");
@@ -67,9 +69,9 @@ public class ProductStoreTests extends BaseTest {
         Wait<WebDriver> wait = miscellaneousSteps.startDriverWait(50, 200);
         productStoreSteps.navigateHome();
         productStoreSteps.homeProductVerification(wait);
-        hoverOver.getFirstDevice().click();
+        homePage.getFirstDevice().click();
         productStoreSteps.addProductVerification(wait);
-        hoverOver.getAddProduct().click();
+        deviceDetailsPage.getAddProduct().click();
         elementsSteps.acknowledgeNotification();
         productStoreSteps.navigateHome();
         productStoreSteps.cartVerification(wait);

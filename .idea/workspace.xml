@@ -5,10 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b04cd305-fce7-473a-bbd3-c54f97c74f67" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/DeviceDetailsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/PlaceOrderPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageobjects/ProductStoreNavigationBar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/DragDropExamplePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/DropDownExamplePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/HoverOverExamplePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/HoverOverPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/PracticeFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageobjects/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageobjects/SignUpPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/BaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/BaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/MiscellaneousSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/MiscellaneousSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ProductStoreSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ProductStoreSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/ProductStoreTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ProductStoreTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pageobjects/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/DragDropExamplePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/DropDownExamplePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/HoverOverExamplePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/HoverOverPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/PracticeFormPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pageobjects/SignUpPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/steps/MiscellaneousSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/steps/MiscellaneousSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/steps/ProductStoreSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/steps/ProductStoreSteps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tests/ProductStoreTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ProductStoreTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

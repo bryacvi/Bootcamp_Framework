@@ -3,29 +3,20 @@ package steps;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import pageobjects.DragDropExamplePage;
-import pageobjects.DropDownExamplePage;
-import pageobjects.HoverOverPage;
-import org.openqa.selenium.By;
 
 import java.time.Duration;
 
 public class MiscellaneousSteps extends BaseSteps{
 
-    DragDropExamplePage w3SchoolsDragDrop = PageFactory.initElements(webDriver, DragDropExamplePage.class);
-    HoverOverPage hoverOverExample = PageFactory.initElements(webDriver, HoverOverPage.class);
-    DropDownExamplePage dropDownExamplePage = PageFactory.initElements(webDriver, DropDownExamplePage.class);
-
     public MiscellaneousSteps(WebDriver webDriver) {
         super(webDriver);
     }
 
-    public void dragDivIntoDiv() {
+    public void dragDivIntoDiv(WebElement draggable, WebElement container) {
         System.out.println("Dragging yellow div and dropping into red div");
-        dragWebElement(w3SchoolsDragDrop.getDivDraggable(), w3SchoolsDragDrop.getDivContainer());
+        dragWebElement(draggable, container);
     }
 
     public void scrollToElement(WebElement element) {
@@ -33,18 +24,18 @@ public class MiscellaneousSteps extends BaseSteps{
         scrollToWebElement(element);
     }
 
-    public void selectSearchEngine(String text) {
+    public void selectSearchEngine(WebElement element, String text) {
         System.out.println("Attempting to select option: " + text);
-        selectFromDropDownByText(dropDownExamplePage.getDropDownFirst(), text);
+        selectFromDropDownByText(element, text);
     }
 
-    public void selectSearchEngineByIndex(int index) {
+    public void selectSearchEngineByIndex(WebElement element, int index) {
         System.out.println("Attempting to select by index: " + index);
-        selectFromDropDownByIndex(dropDownExamplePage.getDropDownFirst(), index);
+        selectFromDropDownByIndex(element, index);
     }
 
-    public String getSelectedSearchEngine() {
-        return getDropDownSelectedOption(dropDownExamplePage.getDropDownFirst());
+    public String getSelectedSearchEngine(WebElement element) {
+        return getDropDownSelectedOption(element);
     }
 
     public Wait<WebDriver> startDriverWait(long seconds, long millis) {
